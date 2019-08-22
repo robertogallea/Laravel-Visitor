@@ -1,0 +1,39 @@
+{
+    "name": "robertogallea/laravel-visitor",
+    "description": "Visitor pattern implementation for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "roberto.gallea",
+            "email": "write@robertogallea.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "robertogallea\\LaravelVisitor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "illuminate/support": "^5.8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2",
+        "mockery/mockery": "dev-master"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "robertogallea\\LaravelVisitor\\VisitorServiceProvider"
+            ]
+        }
+    }
+}

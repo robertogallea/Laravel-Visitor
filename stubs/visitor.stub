@@ -1,0 +1,14 @@
+<?php
+
+namespace DummyNamespace;
+
+use robertogallea\LaravelVisitor\Models\Visitor;
+
+final class DummyClass extends Visitor
+{
+
+    public function getResult()
+    {
+
+    }
+}
