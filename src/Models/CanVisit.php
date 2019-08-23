@@ -10,19 +10,17 @@ trait CanVisit
 
     public function __construct(array $visitees = [])
     {
-        $this->visitees = $visitees;
+        $this->visitees = collect($visitees);
     }
 
     public function addVisitee($visitee)
     {
-        $this->visitees[] = $visitee;
+        $this->visitees->add($visitee);
     }
 
     public function execute()
     {
-        foreach ($this->visitees as $visitee) {
-            $visitee->accept($this);
-        }
+        $this->visitees->each->accept($this);
     }
 
     public function getVisitees()
