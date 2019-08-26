@@ -13,20 +13,20 @@ class XMLVisitor extends Visitor
         $this->xml .= '<book title="' . $book->getTitle() . '" ' .
             'author="' . $book->getAuthor() . '" ' .
             'format="' . $book->getFormat() . '" ' .
-            'pages="' . $book->getPages() . '"></book>' . "\n";
+            'pages="' . $book->getPages() . '"></book>' . PHP_EOL;
     }
 
     public function VisitDVD(DVD $dvd)
     {
         $this->xml .= '<dvd title="' . $dvd->getTitle() . '" ' .
             'format="' . $dvd->getFormat() . '" ' .
-            'duration="' . $dvd->getHour() . ':' . $dvd->getMinutes() . '"></dvd>' . "\n";
+            'duration="' . $dvd->getHour() . ':' . $dvd->getMinutes() . '"></dvd>' . PHP_EOL;
     }
 
     public function visitMagazine(Magazine $magazine)
     {
         $this->xml .= '<magazine title="' . $magazine->getTitle() . '" ' .
-            'issue="' . $magazine->getMonth() . ' ' . $magazine->getYear() . '"></magazine>' . "\n";
+            'issue="' . $magazine->getMonth() . ' ' . $magazine->getYear() . '"></magazine>' . PHP_EOL;
     }
 
     public function getResult()

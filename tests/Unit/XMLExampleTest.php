@@ -25,9 +25,9 @@ class XMLExampleTest extends TestCase
         $xmlCatalog->execute();
 
         $this->assertEquals(
-            '<book title="The Lord of the Rings" author="J.R.R. Tolkien" format="hardcover" pages="521"></book>' . "\n" .
-                '<dvd title="Empire strikes back" format="blue-ray" duration="2:15"></dvd>' . "\n" .
-                '<magazine title="The art of woodworking" issue="August 2019"></magazine>' . "\n",
+            '<book title="The Lord of the Rings" author="J.R.R. Tolkien" format="hardcover" pages="521"></book>' . PHP_EOL .
+                '<dvd title="Empire strikes back" format="blue-ray" duration="2:15"></dvd>' . PHP_EOL .
+                '<magazine title="The art of woodworking" issue="August 2019"></magazine>' . PHP_EOL,
             $xmlCatalog->getResult()
         );
     }

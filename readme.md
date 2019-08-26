@@ -151,7 +151,7 @@ class XMLVisitor extends Visitor
     public function visitMagazine(Magazine $magazine)
     {
         $this->xml .= '<magazine title="' . $magazine->getTitle() . '" ' .
-            'issue="' . $magazine->getMonth() . ' ' . $magazine->getYear() . '"></magazine>' . "\n";
+            'issue="' . $magazine->getMonth() . ' ' . $magazine->getYear() . '"></magazine>' . PHP_EOL;
     }
 
     public function getResult()
@@ -169,7 +169,17 @@ class XMLVisitor extends Visitor
     new Magazine('PHP programming', 'July', 2019)
     new Magazine('The art of woodworking', 'August', 2019)
   ]);
-        
+
+  $xmlCatalog->process();
+  
+  echo($xmlCatalog->getResult());        
+```
+
+will produce the following output:
+
+```html
+<magazine title="PHP programming" issue="July 2019"></magazine>
+<magazine title="The art of woodworking" issue="August 2019"></magazine>
 ```
 
 ## 4 Issues, Questions and Pull Requests
