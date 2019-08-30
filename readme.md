@@ -67,16 +67,22 @@ class MyVisitor extends Visitor
 
 Additionally this enforces SRP principle, since Domain Objects don't have to implement representational methods, which are only responsibility of the Visitor classes implementation (especially if several are required).
 
-## 2. Usage
+## 2. Installation
+
+Install the package via composer:
+
+`composer require robertogallea/laravel-visitor`
+
+## 3. Usage
 
 For using the package, you need to define at least one `Visitor` and some `Visitee` classes.
 
 
-### 2.1 `Visitee`s implementation
+### 3.1. `Visitee`s implementation
 
 The only requirement for `Visitee`s is to use the `Visitable` trait, so you can make any class visitable.
 
-### 2.2. `Visitor`s implementation
+### 3.2. `Visitor`s implementation
 
 A `Visitor` class must impelemnt the `CanVisit` interface and subclass the `Visitor` abstract class, by defining the `getResult()` method.
 
@@ -88,7 +94,7 @@ public function visitBook(Book $book) {
 }
 ```
 
-### 2.3 `Visitor`s generation
+### 3.3. `Visitor`s generation
 
 To generate `Visitor`, you can launch the following artisan commands:
 
@@ -96,9 +102,9 @@ To generate `Visitor`, you can launch the following artisan commands:
 
 which by default creates classes in the `Visitors` folder.
 
-## 3. Example usage:
+## 4. Example usage:
 
-### 3.1 `Visitee` implementation
+### 4.1. `Visitee` implementation
 
 Magazine.php
 ```php
@@ -138,7 +144,7 @@ class Magazine
 
 ```
 
-### 3.2 `Visitor` implementation
+### 4.2. `Visitor` implementation
 
 XMLVisitor.php
 ```php
@@ -161,7 +167,7 @@ class XMLVisitor extends Visitor
 }
 ```
 
-### 3.3 Client code
+### 4.3. Client code
 
 ```php
 
@@ -182,7 +188,7 @@ will produce the following output:
 <magazine title="The art of woodworking" issue="August 2019"></magazine>
 ```
 
-## 4 Issues, Questions and Pull Requests
+## 5. Issues, Questions and Pull Requests
 
 You can report issues and ask questions in the [issues section](https://github.com/robertogallea/laravel-visitor/issues). Please start your issue with `ISSUE: ` and your question with `QUESTION: `
 
