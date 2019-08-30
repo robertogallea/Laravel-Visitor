@@ -1,7 +1,7 @@
 # LaravelVisitor
 
 ## 1. Introduction 
-LaravelVisitor is a Visitor Design Pattern implementation for Laravel. It allows to easily execute processing of collections of arbitrary elements, without requiring to use repeated conditionals, thus improving code abstraction.
+LaravelVisitor is a [Visitor Design Pattern](https://it.wikipedia.org/wiki/Visitor) implementation for Laravel. It allows to easily execute processing of collections of arbitrary elements, without requiring to use repeated conditionals, thus improving code abstraction.
 
 Without Visitor:
 ```php
