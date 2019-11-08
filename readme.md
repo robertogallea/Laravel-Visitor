@@ -176,7 +176,7 @@ class XMLVisitor extends Visitor
     new Magazine('The art of woodworking', 'August', 2019)
   ]);
 
-  $xmlCatalog->process();
+  $xmlCatalog->execute();
   
   echo($xmlCatalog->getResult());        
 ```
