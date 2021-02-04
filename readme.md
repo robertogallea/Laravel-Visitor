@@ -45,7 +45,7 @@ class MyVisitor extends Visitor
   
   public function getResult()
   {
-    return $this->result();
+    return $this->result;
   }
   
   public function visitFooClass(FooClass $fooClass) 
